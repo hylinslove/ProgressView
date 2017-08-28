@@ -1,7 +1,5 @@
 package com.chinastis.progressviewdemo;
 
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.SeekBar;
@@ -9,7 +7,6 @@ import android.widget.SeekBar;
 public class MainActivity extends AppCompatActivity {
 
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

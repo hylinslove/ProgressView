@@ -1,5 +1,6 @@
 package com.chinastis.progressviewdemo;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -7,13 +8,10 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Build;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
-
-@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class MyProgressView extends View {
 
     private int inColor;
@@ -76,6 +74,7 @@ public class MyProgressView extends View {
     }
 
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onDraw(Canvas canvas) {
 
