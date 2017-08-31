@@ -2,15 +2,16 @@
 自定义进度条
 how to use:
 
-step1:
-
-allprojects {
+  step1:
+  
+```Java
+  allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
 	}
-  
+	
   step2：
   
   dependencies {
