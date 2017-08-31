@@ -1,8 +1,6 @@
 # ProgressView
 自定义进度条
 how to use:
-
-  step1:
   
 ```Java
   allprojects {
@@ -12,7 +10,6 @@ how to use:
 		}
 	}
 	
-  step2：
   
   dependencies {
 	        compile 'com.github.hylinslove:ProgressView:v2.0'
