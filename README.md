@@ -12,5 +12,5 @@ how to use:
 	
   
  dependencies {
- 	compile 'com.github.hylinslove:ProgressView:v2.0'
+ 	compile 'com.github.hylinslove:ProgressView:v2.1'
 }
