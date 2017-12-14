@@ -9,7 +9,6 @@ import android.graphics.Paint;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 
 public class MyProgressView extends View {
@@ -32,11 +31,11 @@ public class MyProgressView extends View {
         super(context, attrs);
 
 
-        TypedArray ta = context.obtainStyledAttributes(attrs,R.styleable.MyProgressView);
+        TypedArray ta = context.obtainStyledAttributes(attrs, com.chinastis.progressviewdemo.R.styleable.MyProgressView);
 
-        inColor = ta.getColor(R.styleable.MyProgressView_in_color, Color.RED);
-        outColor = ta.getColor(R.styleable.MyProgressView_out_color, Color.BLUE);
-        progress = ta.getInt(R.styleable.MyProgressView_progress,0);
+        inColor = ta.getColor(com.chinastis.progressviewdemo.R.styleable.MyProgressView_in_color, Color.RED);
+        outColor = ta.getColor(com.chinastis.progressviewdemo.R.styleable.MyProgressView_out_color, Color.BLUE);
+        progress = ta.getInt(com.chinastis.progressviewdemo.R.styleable.MyProgressView_progress,0);
 
         ta.recycle();
         initPaint();
@@ -99,18 +98,19 @@ public class MyProgressView extends View {
         canvas.drawArc(width-height+15,15,width-15,height-15,270,180,false,paint);
 
 
-
+        paint.setStrokeWidth(10);
         canvas.drawLine(r+20,20,width-r-20,20,paint);
 
         canvas.drawLine(r+20,height-20,width-r-20,height-20,paint);
 
-        paint.setColor(Color.parseColor("#00ffffff"));
+        paint.setColor(Color.parseColor("#ffffff"));
+        paint.setStrokeWidth(height-50);
         canvas.drawArc(25,25,height-25,height-25,90,180,false,paint);
 
         canvas.drawArc(width-height+25,25,width-25,height-25,270,180,false,paint);
-
+        canvas.drawLine(r+20,height/2,r+20+longTotal,height/2,paint);
         if(progress!=0) {
-
+            paint.setColor(inColor);
             paint.setStrokeWidth(0);
             paint.setStyle(Paint.Style.FILL);
 
@@ -128,3 +128,4 @@ public class MyProgressView extends View {
         invalidate();
     }
 }
+
