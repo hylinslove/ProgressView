@@ -91,19 +91,26 @@ public class MyProgressView extends View {
         float longProgress = longTotal*radius;
 
         paint.setColor(outColor);
-        paint.setStrokeWidth(10);
-        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(0);
+        paint.setStyle(Paint.Style.FILL);
 
-        canvas.drawArc(20,20,height-20,height-20,90,180,false,paint);
+        canvas.drawArc(15,15,height-15,height-15,90,180,false,paint);
 
-        canvas.drawArc(width-height+20,20,width-20,height-20,270,180,false,paint);
+        canvas.drawArc(width-height+15,15,width-15,height-15,270,180,false,paint);
+
+
 
         canvas.drawLine(r+20,20,width-r-20,20,paint);
 
         canvas.drawLine(r+20,height-20,width-r-20,height-20,paint);
 
+        paint.setColor(Color.parseColor("#00ffffff"));
+        canvas.drawArc(25,25,height-25,height-25,90,180,false,paint);
+
+        canvas.drawArc(width-height+25,25,width-25,height-25,270,180,false,paint);
+
         if(progress!=0) {
-            paint.setColor(inColor);
+
             paint.setStrokeWidth(0);
             paint.setStyle(Paint.Style.FILL);
 
